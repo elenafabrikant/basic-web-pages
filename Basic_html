@@ -2,10 +2,22 @@
 <html>
     <head>
     <!---metadata-->
-    <title>Interneting is Easy!</title>
+        <title>Interneting is Easy!</title>
     </head>
     <body>
-    <!-- Content goes here -->
+        <!---make input here!!-->
+        <h1>Interneting Is Easy</h1>
+        <p>First, we need to learn some basic HTML.</p>
+
+        <h2>Lists</h2>
+
+        <p>Thisis how you make an unordered list:</p>
+
+        <ul>
+            <li> Add an"ul" ekement (it stands for unordered list)</li>
+            <li> Add each item in its own "li" element</li>
+            <li>They don't need to be in any particular order</li>
+        </ul>
     </body>
 </html>
 
