@@ -1,0 +1,44 @@
+.flex-container {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+    grid-gap: 20px;
+    grid-column:2/span2;
+
+
+  }
+.flex-item {
+    margin: 50px;
+    padding: 100px;
+    border: 1px solid #5f0065;
+    
+}
+
+
+body {
+    background-color: #f0f0f0;  /* Red background */
+    font-family: 'Courier New', Courier, monospace;  /* Font family */
+    color: #5f0065;  /* Dark gray text color */
+    margin: 100px;
+}
+h1 {
+    color:rgb(87, 0, 137);
+}
+
+
+ol {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    color:rgb(26, 0, 45);
+}
+
+p {
+color:rgb(120, 0, 58);
+
+}
+
+*{
+    box-sizing: border-box;
+    font-family: monospace;
+}
