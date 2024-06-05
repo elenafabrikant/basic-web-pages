@@ -11,11 +11,8 @@
 .flex-item {
     margin: 50px;
     padding: 100px;
-    border: 1px solid #5f0065;
-    
+    border: 1px solid #5f0065;  
 }
-
-
 body {
     background-color: #f0f0f0;  /* Red background */
     font-family: 'Courier New', Courier, monospace;  /* Font family */
