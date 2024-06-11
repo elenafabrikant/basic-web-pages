@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Webpage!</title>
+    <link rel="stylesheet" href="jonas.css" />
+    <script src="jonas.js" defer></script>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="header">
+        <h1>Elena Fabrikant</h1>
+        <ul class="menu">
+          <li class="flex-item">Menu</li>
+          <li class="flex-item">Login</li>
+          <li class="flex-item">Scheudle</li>
+        </ul>
+      </header>
+
+      <section id="section">
+        <div class="image">
+          <img src="images/colorpoint.jpeg" />
+        </div>
+        <div class="text">
+          <h1>Hello this is my Website</h1>
+          <p>
+            lorem ipsum whatever this is the text on my page. It makes me sad
+            that this is so complicated, and i sincerely hope that i make
+            everything right. Thanks
+          </p>
+          <button class="button-more">more</button>
+        </div>
+      </section>
+
+      <div class="image-holders">
+        <div class="image-button">
+          <img src="images/pointtwo.svg" width="300px" alt="Bild 1" />
+          <button class="button-more">more</button>
+        </div>
+        <div class="image-button">
+          <button
+            class="button-more"
+            onclick="document.getElementById('myImage').src='images/colorpoint.jpeg'"
+          >
+            more
+          </button>
+          <img id="myImage" src="images/colorpoint.jpeg" style="width: 100px" />
+          <button
+            class="button-more"
+            onclick="document.getElementById('myImage').src='images/pointtwo.svg'"
+          >
+            really?
+          </button>
+        </div>
+        <div class="image-button">
+          <img src="images/pointtwo.svg" width="300px" alt="Bild 3" />
+          <button class="button-more">more</button>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <ul class="list-left">
+          <li class="flex-item">Informations</li>
+          <li class="flex-item">Weblinks</li>
+          <li class="flex-item">To the Top</li>
+        </ul>
+        <ul class="list-right">
+          <li class="flex-item">Informations</li>
+          <li class="flex-item">Weblinks</li>
+          <li class="flex-item">To the Top</li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
