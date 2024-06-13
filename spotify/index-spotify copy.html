@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spotify Playlist with Preview</title>
+    <script src="spotify_deux.js" defer></script>
+    <link rel="stylesheet" href="spotify_deux.css" />
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <div id="content-container">
+      <div id="profile">
+        <div class="circleelement"></div>
+        <h1>Elena Fabrikant</h1>
+        <p>Follower: 7</p>
+        <p>Playlists: 12</p>
+      </div>
+      <div id="middle-container">
+        <div class="album-cover">
+          <img
+            id="album-cover-img"
+            src="images/cover.svg"
+            width="600px"
+            alt="Bild 1"
+          />
+        </div>
+        <div class="song-preview">
+          <h1 class="song_title"></h1>
+          <!-- NEU -->
+          <div class="song-preview-items">
+            <!-- swaps with pause icon -->
+            <button class="prev-icon"></button>
+            <button class="play-icon"></button>
+            <button class="pause-icon"></button>
+            <button class="next-icon"></button>
+          </div>
+          <div id="audio-player-container">
+            <span id="current-time" class="time">0:00</span>
+            <div id="progress-bar-container">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <span id="duration" class="time">0:00</span>
+          </div>
+          <h3 class="artist-title">Artist Name</h3>
+        </div>
+      </div>
+
+      <div id="playlist-item">
+        <div id="main">
+          <div class="playlist">
+            <div data-js="tracks">
+              <!-- here we are going to display the fetched tracks -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>

@@ -1,7 +1,9 @@
 const SPOTIFY_CLIENT_ID = "1d50e930a8b34a4998dc537704793eb2";
 const SPOTIFY_CLIENT_SECRET = "b6fbf298ba2141f49f9859341ec742dc";
-const PLAYLIST_ID = "7fXKDSXrj7RljWC4QTixrd";
+const PLAYLIST_ID = "7DC8Y5uPk9hLmP7h0AeMoq";
 const container = document.querySelector('div[data-js="tracks"]');
+
+
 
 function fetchPlaylist(token, playlistId) {
   console.log("token: ", token);
@@ -35,6 +37,7 @@ function addTracksToPage(items) {
   items.forEach((item) => {
     console.log("track: ", item.track);
     const li = document.createElement("li");
+    li.classList.add("track-item");
 
     li.innerHTML = `
           <p>${item.track.name} by ${item.track.artists
@@ -43,6 +46,11 @@ function addTracksToPage(items) {
           ${
             item.track.preview_url
               ? `<audio controls src="${item.track.preview_url}"></audio>`
+              : "<p>No preview available</p>"
+          }
+          ${
+            item.track.album.images[0]
+              ? `<img class="albumimg" src="${item.track.album.images[0].url}"></img>`
               : "<p>No preview available</p>"
           }
         `;
@@ -71,5 +79,6 @@ function fetchAccessToken() {
       console.error("Error:", error);
     });
 }
+
 
 fetchAccessToken();

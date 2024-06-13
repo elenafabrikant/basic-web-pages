@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spotify Playlist with Preview</title>
+    <script src="spotify.js" defer></script>
+    <link rel="stylesheet" href="spotify.css" />
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <div id="content-container">
+      <div id="sidebar">
+        <ul class="sidemenu">
+          <button class="button-more">Library</button>
+          <button class="button-more">Suggestions</button>
+          <button class="button-more">Search</button>
+        </ul>
+      </div>
+      <div id="middle-container">
+        <div id="profile">
+          <div class="circleelement"></div>
+          <h1>Elena</h1>
+        </div>
+        <div class="album-cover">
+          <img src="images/cover.svg" width="600px" alt="Bild 1" />
+        </div>
+        <div class="song-preview">
+          <h1>Songtitle</h1>
+          <div class="song-preview-items">
+            <div
+              class="circle"
+              style="
+                border: 2px solid blueviolet;
+                background-color: transparent;
+              "
+            ></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div
+              class="circle"
+              style="
+                border: 2px solid blueviolet;
+                background-color: transparent;
+              "
+            ></div>
+          </div>
+          <div class="rounded-rectangle"></div>
+          <h3>artist name</h3>
+        </div>
+      </div>
+
+      <div id="playlist-item">
+        <div id="main">
+          <div class="playlist">
+            <div data-js="tracks">
+              <!-- here we are going to display the fetched tracks -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
