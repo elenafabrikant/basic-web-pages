@@ -1,10 +1,11 @@
 const SPOTIFY_CLIENT_ID = "1d50e930a8b34a4998dc537704793eb2";
 const SPOTIFY_CLIENT_SECRET = "b6fbf298ba2141f49f9859341ec742dc";
-const PLAYLIST_ID = "7DC8Y5uPk9hLmP7h0AeMoq";
+const PLAYLIST_ID = "3j0H3udE81fjpT2H84xype";
 const container = document.querySelector('div[data-js="tracks"]');
 let currentAudio = null;
 let currentTrackIndex = 0;
 let tracks = [];
+let shuffled = false;
 
 function fetchPlaylist(token, playlistId) {
   fetch(`https://api.spotify.com/v1/playlists/${PLAYLIST_ID}`, {
@@ -135,13 +136,28 @@ function togglePlayPause() {
 }
 
 function playNextTrack() {
-  currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+  if (shuffled) {
+    currentTrackIndex = Math.floor(Math.random() * tracks.length);
+  } else {
+    currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+  }
   playTrack(currentTrackIndex);
 }
 
 function playPreviousTrack() {
-  currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+  if (shuffled) {
+    currentTrackIndex = Math.floor(Math.random() * tracks.length);
+  } else {
+    currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+  }
   playTrack(currentTrackIndex);
+}
+
+function shuffleTracks() {
+  shuffled = !shuffled;
+  if (shuffled) {
+    playNextTrack();
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -149,17 +165,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const pauseIcon = document.querySelector(".pause-icon");
   const nextIcon = document.querySelector(".next-icon");
   const prevIcon = document.querySelector(".prev-icon");
+  const shuffleButton = document.querySelector(".shuffle-button");
 
   playIcon.addEventListener("click", togglePlayPause);
   pauseIcon.addEventListener("click", togglePlayPause);
   nextIcon.addEventListener("click", playNextTrack);
   prevIcon.addEventListener("click", playPreviousTrack);
+  shuffleButton.addEventListener("click", shuffleTracks);
 
   // Set the initial state of the play/pause icons
   playIcon.style.display = "block";
   pauseIcon.style.display = "none";
 });
-
 
 fetchAccessToken();
 

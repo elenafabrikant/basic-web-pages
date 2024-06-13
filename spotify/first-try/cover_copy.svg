@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3704" height="3704" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <rect height="3704" width="3704" fill="#fff"/>
+ <g id="i">
+  <g id="j">
+   <g id="d">
+    <path d="m2336.6 93.117v247.68h51.973v-109.78h95.174v109.78h51.973v-247.68h-51.973v94.959h-95.174v-94.959z"/>
+    <g id="h">
+     <path d="m2835.2 93.117v247.68h175.98v-42.936h-124.01v-204.74z"/>
+     <path d="m3043.5 93.117v247.68h175.98v-42.936h-124.01v-204.74z"/>
+     <path d="m2653.9 247.2h63.064l-31.532-97.045zm-85.75 93.597 87.708-247.68h59.15l87.708 247.68h-55.339l-16.508-50.806h-90.871l-16.508 50.806z"/>
+    </g>
+   </g>
+   <g id="c">
+    <path d="m3610.9 2255.8h-42.936v74.889h-204.74v51.975h204.74v74.887h42.936z"/>
+    <path d="m3610.9 3079-153.88 84.6h-93.793v51.975h93.791l153.89 84.6v-59.148l-110.81-51.438 110.81-51.438z"/>
+    <use transform="rotate(90 1915 1789)" xlink:href="#h"/>
+   </g>
+   <g id="f">
+    <path id="b" d="m0 0 926 926 926-926z"/>
+    <path d="m403.81 93.1v42.936h74.889v204.74h51.975v-204.74h74.887v-42.936z" fill="#fff"/>
+    <path d="m1227 93.1 84.6 153.88v93.793h51.975v-93.791l84.6-153.89h-59.148l-51.438 110.81-51.438-110.81z" fill="#fff"/>
+    <use transform="rotate(-90 -772.08 1206)" xlink:href="#g"/>
+   </g>
+   <use transform="matrix(0,-1,-1,0,3704,1852)" xlink:href="#f"/>
+   <use id="a" transform="rotate(-90,1852,1852)" xlink:href="#b"/>
+   <g id="e">
+    <path d="m340.78 2336.6h-247.68v51.973h109.78v95.174h-109.78v51.973h247.68v-51.973h-94.959v-95.174h94.959z" fill="#fff"/>
+    <g id="g">
+     <path d="m340.78 2835.2h-247.68v175.98h42.936v-124.01h204.74z" fill="#fff"/>
+     <path d="m340.78 3043.5h-247.68v175.98h42.936v-124.01h204.74z" fill="#fff"/>
+     <path d="m186.7 2653.9v63.064l97.045-31.532zm-93.597-85.75 247.68 87.708v59.15l-247.68 87.708v-55.339l50.806-16.508v-90.871l-50.806-16.508z" fill="#fff"/>
+    </g>
+   </g>
+   <use transform="rotate(-90,1852,1852)" xlink:href="#a"/>
+   <use transform="matrix(0 1 1 0 0 3270.1)" xlink:href="#e"/>
+   <use transform="matrix(0 -1 -1 0 433.91 3704)" xlink:href="#d"/>
+   <use transform="matrix(0 1 1 0 -1852 0)" xlink:href="#c"/>
+  </g>
+  <use transform="matrix(.5 .5 -.5 .5 1852 .00036707)" xlink:href="#j"/>
+  <use transform="matrix(0 .5 -.5 0 2778 926)" xlink:href="#j"/>
+  <use transform="matrix(-.25 .25 -.25 -.25 2778 1852)" xlink:href="#j"/>
+ </g>
+ <use transform="matrix(.25 0 0 .25 1389 1389)" xlink:href="#i"/>
+ <use transform="matrix(.0625 0 0 .0625 1736.2 1736.2)" xlink:href="#i"/>
+ <use transform="matrix(.015625 0 0 .015625 1823.1 1823.1)" xlink:href="#i"/>
+ <use transform="matrix(.0039062 0 0 .0039062 1844.8 1844.8)" xlink:href="#i"/>
+ <use transform="matrix(.00097656 0 0 .00097656 1850.2 1850.2)" xlink:href="#i"/>
+ <use transform="matrix(.00024414 0 0 .00024414 1851.5 1851.5)" xlink:href="#i"/>
+ <use transform="matrix(6.1035e-5 0 0 6.1035e-5 1851.9 1851.9)" xlink:href="#i"/>
+</svg>
