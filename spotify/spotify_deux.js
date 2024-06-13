@@ -52,6 +52,12 @@ function playTrack(index) {
     currentAudio.currentTime = 0;
   }
 
+  // Remove 'playing' class from previously played track
+  const previousPlaying = document.querySelector('.track-item.playing');
+  if (previousPlaying) {
+    previousPlaying.classList.remove('playing');
+  }
+
   currentTrackIndex = index;
   const track = tracks[index].track;
   const audioElement = new Audio(track.preview_url);
@@ -68,6 +74,12 @@ function playTrack(index) {
   currentAudio.addEventListener("ended", () => {
     playNextTrack();
   });
+
+  // Add 'playing' class to current track
+  const currentPlaying = document.querySelector(`.track-item[data-index="${index}"]`);
+  if (currentPlaying) {
+    currentPlaying.classList.add('playing');
+  }
 
   // Set the play button to pause state
   const playIcon = document.querySelector(".play-icon");
@@ -158,6 +170,13 @@ function shuffleTracks() {
   if (shuffled) {
     playNextTrack();
   }
+  toggleShuffleButtonActive(); // Call to toggle shuffle button state
+}
+
+// Function to toggle 'active' class on shuffle button
+function toggleShuffleButtonActive() {
+  const shuffleButton = document.querySelector(".shuffle-button");
+  shuffleButton.classList.toggle("active");
 }
 
 document.addEventListener("DOMContentLoaded", () => {

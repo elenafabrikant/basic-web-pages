@@ -16,8 +16,35 @@ body {
 }
 
 p {
-  margin-top: 15px;
+  margin-top: 10px;
   text-align: left;
+}
+
+h3 {
+  display: inline-block;
+  padding: 5px;
+  color: white; /* Standardfarbe des Textes */
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease; /* Übergangseffekt für Textfarbe */
+}
+
+h3:hover {
+  text-decoration: none; /* Unterstreichung bei Hover ausblenden */
+  color: white; /* Textfarbe bei Hover */
+}
+h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px; /* Höhe der Unterstreichung */
+  background-color: rgb(75, 75, 75); /* Weiße Farbe der Unterstreichung */
+  transition: width 0.3s ease; /* Übergangseffekt für Unterstreichung */
+}
+h3:hover::after {
+  width: 100%; /* Breite der Unterstreichung bei Hover */
 }
 
 #header {
@@ -52,12 +79,54 @@ p {
   margin-top: 150px; /* Passt den Abstand an */
 }
 
+.follower,
+.playlists {
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  color: rgb(255, 255, 255); /* Default text color */
+  position: relative;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
 .social-media {
   display: flex;
-  filter: invert(100%);
+  filter: invert(100%) brightness(50%);
   margin: 30px;
   gap: 15px;
   cursor: pointer; /* Zeigt an, dass es sich um einen interaktiven Button handelt */
+}
+.follower,
+.playlists {
+  display: inline-block;
+  padding: 5px;
+  color: white; /* Standardfarbe des Textes */
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease; /* Übergangseffekt für Textfarbe */
+}
+
+.follower:hover,
+.playlists:hover {
+  text-decoration: none; /* Unterstreichung bei Hover ausblenden */
+  color: white; /* Textfarbe bei Hover */
+}
+
+.follower::after,
+.playlists::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px; /* Höhe der Unterstreichung */
+  background-color: rgb(75, 75, 75); /* Weiße Farbe der Unterstreichung */
+  transition: width 0.3s ease; /* Übergangseffekt für Unterstreichung */
+}
+
+.follower:hover::after,
+.playlists:hover::after {
+  width: 100%; /* Breite der Unterstreichung bei Hover */
 }
 
 .album-cover {
@@ -291,6 +360,11 @@ p {
   margin-left: 18px;
   align-items: flex-end;
   cursor: pointer; /* Zeigt an, dass es sich um einen interaktiven Button handelt */
+  filter: brightness(60%);
+}
+.shuffle-button.active {
+  filter: brightness(60%);
+  filter: invert(20%);
 }
 
 #footer {
@@ -333,6 +407,10 @@ p {
   flex-direction: row;
   margin-top: 10px;
   display: none; /* Hide the default audio controls */
+}
+
+.playing {
+  background-color: #333;
 }
 
 .song_title {
