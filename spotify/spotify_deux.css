@@ -195,13 +195,10 @@ h3:hover::after {
 }
 
 .play-icon {
-  width: 65px;
-  height: 65px;
-  cursor: pointer;
-  background-color: black;
   position: relative; /* Ensure proper positioning for the triangle */
   transform: rotate(90deg);
   background-color: white;
+  content: "";
 }
 
 .play-icon::before {
@@ -210,8 +207,6 @@ h3:hover::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%) rotate(90deg); /* Rotate the triangle */
-  width: 0;
-  height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-right: 25px solid rgb(0, 0, 0);
@@ -238,6 +233,7 @@ h3:hover::after {
   background-color: rgb(0, 0, 0);
 }
 
+/*block right and left*/
 .pause-icon:before {
   left: 14px;
 }
