@@ -207,7 +207,7 @@ h3:hover::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%) rotate(90deg); /* Rotate the triangle */
-  border-top: 15px solid transparent; /*create shape*/
+  border-top: 15px solid transparent; /*shape erstellen*/
   border-bottom: 15px solid transparent;
   border-right: 25px solid rgb(0, 0, 0);
 }
