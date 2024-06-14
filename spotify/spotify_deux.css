@@ -195,26 +195,24 @@ h3:hover::after {
 }
 
 .play-icon {
-  position: relative; /* Ensure proper positioning for the triangle */
+  position: relative; /* pseudo ist abhängig davon */
   transform: rotate(90deg);
   background-color: white;
   content: "";
 }
 
 .play-icon::before {
-  content: "";
+  content: ""; /*you always need that!!*/
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%) rotate(90deg); /* Rotate the triangle */
-  border-top: 15px solid transparent;
+  border-top: 15px solid transparent; /*create shape*/
   border-bottom: 15px solid transparent;
   border-right: 25px solid rgb(0, 0, 0);
 }
 
 .pause-icon {
-  width: 65px;
-  height: 65px;
   background-color: transparent;
   position: relative;
   border: 2px solid white;

@@ -58,6 +58,7 @@ function playTrack(index) {
     previousPlaying.classList.remove('playing');
   }
 
+  // create Anzeigebild
   currentTrackIndex = index;
   const track = tracks[index].track;
   const audioElement = new Audio(track.preview_url);
@@ -70,6 +71,7 @@ function playTrack(index) {
   currentAudio.play();
   updateProgressBar();
 
+  // Where are we in current song?
   currentAudio.addEventListener("timeupdate", updateProgressBar);
   currentAudio.addEventListener("ended", () => {
     playNextTrack();
@@ -87,6 +89,7 @@ function playTrack(index) {
   playIcon.style.display = "none";
   pauseIcon.style.display = "block";
 }
+
 
 function updateProgressBar() {
   const progressBar = document.getElementById("progress-bar");
@@ -192,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
   prevIcon.addEventListener("click", playPreviousTrack);
   shuffleButton.addEventListener("click", shuffleTracks);
 
-  // Set the initial state of the play/pause icons
+  // Anfangsstate play/pause
   playIcon.style.display = "block";
   pauseIcon.style.display = "none";
 });
